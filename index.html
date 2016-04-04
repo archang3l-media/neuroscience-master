@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>Fachinformatiker Systemintegration</title>
+		<title>Neuroscience Seminar</title>
 
 		<meta name="description" content="Neuroscience Seminar">
 		<meta name="author" content="Heiko Borchers">
@@ -124,6 +124,31 @@ for z in range(len(sorted_list)): #you can also iterate over lists
 						<h2>MATLAB</h2>
 						<p>Software to analyze (fMRI) data</br>
 						</p>
+						<pre><code class="hljs" data-trim contenteditable>
+for t = h:h:tstop
+
+	% Euler method: V(t+h) = V(t) + h*dV/dt
+	V = V +h*(- (V/(R*C)) + (I/C));
+
+	% Verify membrane time constant
+	if (~tau && (V > 0.6321*V_inf))
+		tau = t
+		disp('(Experimental)')
+	end
+
+	% Stop current injection
+	if (t >= 0.6*tstop)
+		I = 0;
+	end
+
+	V_trace = [V_trace V];
+	if ~rem(t,10)
+		plot(0:h:t,V_trace,'r')
+			axis([0 tstop 0 V_inf])
+		drawnow
+	end
+
+end
 					</section>
 					<section>
 						<h2>Presentation</h2>
