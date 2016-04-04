@@ -125,6 +125,40 @@ for z in range(len(sorted_list)): #you can also iterate over lists
 						<p>Software to analyze (fMRI) data</br>
 						</p>
 						<pre><code class="hljs" data-trim contenteditable>
+% the following code models a passive neuronal membrance
+% as RC-circuit.
+% Note: in a membrane model, the resistor and capacitor are
+% in parallel.
+
+% this code demonstrates how a membrance responds to a constant
+% current input that is turned on for a fixed time interval
+% and then turned off.
+
+% Charging and discharging curves for passive membrane patch
+% R Rao 2007
+
+clear
+% input current
+I = 10 % nA
+
+% capacitance and leak resistance
+
+C = 0.1/10 % nF
+R = 100*10 % M ohms
+tau = R*C % = 0.1*100 nF-Mohms = 100*100 pF Mohms = 10 ms
+disp('(Theoretical)')
+
+% membrane potential equation dV/dt = - V/RC + I/C
+
+tstop = 150; % ms
+
+V_inf = I*R; % peak V (in mV)
+tau = 0; % experimental (ms)
+
+h = 0.2; % ms (step size)
+
+V = 0; % mV
+V_trace = [V]; % mV
 for t = h:h:tstop
 
 	% Euler method: V(t+h) = V(t) + h*dV/dt
@@ -198,10 +232,10 @@ end
         </section>
 
 				<section>
-					<h3>Affinität zur Ausbildung als Fachinformatiker</h3>
+					<h3>Sources</h3>
           <p>
             <ul>
-              <li>Analytisches Arbeiten</li>
+              <li>https://github.com/quinnliu/ComputationalNeuroscience</li>
               <li>Arbeiten im Team</li>
               <li>Schnittstelle zwischen Nutzer und Computer</li>
               <li>Probleme lösen</li>
