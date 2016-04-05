@@ -86,19 +86,38 @@
 						<h2>Language Details</em></h2>
 					</section>
 					<section>
+						<h2>SPSS</h2>
+						<p>Short for <b>S</b>tatistical <b>P</b>ackage for the <b>S</b>ocial <b>S</b>ciences</br>
+							Used for statistical analysis and data mining
+						</p>
+						<pre><code class="hljs" data-trim contenteditable="false">
+* create a new data file that just has "x1" in it from 1 to 20 by 1.
+input program.
+	loop #i = 1 to 30 by 1.
+	compute x1 = #i.
+	end case.
+end loop.
+end file.
+end input program.
+execute.
+
+* fill in logistic equation below .
+* say equation is -3 + .3*x1 + .1 * x2.
+* and x2 has a mean of 5.
+compute ylog = -3 + .3*x1 + 5*.1  .
+compute py = 1 - 1/(1 + exp(ylog)) .
+execute.
+
+* show graph with prob y on y axis, and x1 on x axis.
+GRAPH /LINE(SIMPLE)=VALUE( py ) BY x1 .
+					</code></pre>
+					</section>
+					<section>
 						<h2>R</h2>
 						<p>
 							Programming Language for statistic computing <br />
 							Comparebale to MATLAB and SPSS but free software<br />
 						</p>
-
-					</section>
-					<section>
-						<h2>SPSS</h2>
-						<p>Short for <b>S</b>tatistical <b>P</b>ackage for the <b>S</b>ocial <b>S</b>ciences</br>
-							Used for statistical analysis and data mining
-						</p>
-
 					</section>
 					<section>
 						<h2>Python</h2>
