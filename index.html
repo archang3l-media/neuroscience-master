@@ -342,10 +342,10 @@ TODO: Manische Episoden
 						<h3>Commenting your Code</h3>
 						<pre><code class="hljs" data-trim contenteditable="false">
 print(‘Single line comment’) #This symbol indicates a single line comment
-print(‘Multiline comments are different’)
+print(‘Multiline comments are different’)
 """This is a comment
-which spans over multiple
-lines."""
+which spans over multiple
+lines."""
 						</code></pre>
 						<p> Commenting your code makes it more read- and maintainable</p>
 					</section>
@@ -394,9 +394,9 @@ i = a // b #floor division
 						<pre><code class "hljs" data-trim contenteditable="false">
 a = ‘Hello ‘
 b = ‘World!’
-c = len(a+b) # Gives us the length of "Hello World!" and stores it in c
-print (a + b) # Prints out Hello World!
-print c #Prints out the Lenght of Hello World
+c = len(a+b) # Gives us the length of "Hello World!" and stores it in c
+print (a + b) # Prints out Hello World!
+print c #Prints out the Lenght of Hello World
 					</code></pre>
 				</section>
 				<section>
@@ -413,14 +413,14 @@ b = ‘World!’
 					<p>for loops which execute instructions FOR a specific time or a specific number of times</p>
 					<pre><code class "hljs" data-trim contenteditable="false">
 my_list = ['banana', 'strawberry', 'apple', 'lemon', 'peach']
-sorted_list = sorted(my_list)
-for x in range(1,11,1):
-	print(x)
+sorted_list = sorted(my_list)
+for x in range(1,11,1):
+	print(x)
 print()
-for y in range(10,0,-1):
-	print(y)
+for y in range(10,0,-1):
+	print(y)
 print()
-for z in range(len(sorted_list)):
+for z in range(len(sorted_list)):
 	print (sorted_list[z])
 						</code></pre>
 						</section>
@@ -429,11 +429,11 @@ print()
 							<p>while loops which execute instructions WHILE a specific condition is met</p>
 							<pre><code class "hljs" data-trim contenteditable="false">
 while condition_one == another_condition:
-	do_something()
+	do_something()
 	do_something_more() #optional
 	break_condition == True #optional
 a = 0
-while a < 10:
+while a < 10:
 	a =+ 1
 	print(a)
 						</code></pre>
@@ -442,15 +442,31 @@ a = 0
 							<h3>Branching with "if"</h3>
 							<p>The following program prints out the numbers from 0 to 100 and if they are even, odd or null</p>
 							<pre><code class "hljs" data-trim contenteditable="false">
-for x in range(0, 101, 1):
+for x in range(0, 101, 1):
 	if x == 0:
-			print(x, ' is null')
+		print(x, ' is null')
 	elif x % 2 != 0:
-			print(x, ' is odd')
+		print(x, ' is odd')
 	else:
-			print(x, ' is even‘)
+		print(x, ' is even‘)
 						</code></pre>
 					</section>
+					<section>
+						<h3>functions</h3>
+						<ul>
+						<li>Functions are necessary to reduce the lines of code</li>
+						<li>There are two types of funktions</li>
+						<li>built-in functions like print(), sort() and so on</li>
+						<li>and self defined funktions</li>
+						<pre><code class "hljs" data-trim contenteditable="false">
+def answer():
+	return 42
+answer #This simple function just returns 42
+def print_list(list):
+	for item in list:
+		print(item) #This function takes a list as an argument and prints every item in a new line
+					</code></pre>
+				</section>
 				</section>
 				<section>
 					<h3>Sources</h3>
@@ -465,12 +481,11 @@ for x in range(0, 101, 1):
             </ul>
           </p>
         </section>
-
 				<section>
 					<h3>Further reading</h3>
 					<p>
 						<ul>
-							<li><a href="https://developers.google.com/edu/python/set-up">Google for Education</a></li>
+							<li><a href="https://developers.google.com/edu/python/set-up">Google for Education</a></li>
 							<li><a href="http://www.codecademy.com/en/tracks/python">Codecademey Python course</a></li>
 							<li><a href="http://podcasts.iai.uni-bonn.de/oose/hd/">Objektorientierte Softwareentwicklung 2012 (German)</a></li>
 							<li><a href="http://journal.frontiersin.org/article/10.3389/fninf.2015.00011/full">Python in Neuroscience (from Frontiers in Neuroinformatics)</a></li>
