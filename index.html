@@ -468,8 +468,28 @@ def print_list(list):
 		print(item) """This function takes a
 		list as an argument and prints
 		every item in a new line"""
-					</code></pre>
-				</section>
+						</code></pre>
+					</section>
+					<section>
+						<h3>including modules and libraries</h3>
+						<ul>
+							<li>Sometimes python alone does not have all functions implemented you need</li>
+							<li>This is what modules are for</li>
+							<li>You can chose to import a whole modules or just some specific functions from it</li>
+							<li>To import a complete module add "import module_name" to the start of your program</li>
+							<li>If you just need one or more specific functions from a module you can tell python this via "from module_name import function"</li>
+						</ul>
+					</section>
+					<section>
+						<pre><code class "hljs" data-trim contenteditable="false">
+import math
+print math.sqrt(25)
+
+from math import sqrt
+print sqrt(25)
+						</code></pre>
+						<small>The result of both code fragments is the same</small>
+					</section>
 				</section>
 				<section>
 					<h3>Sources</h3>
