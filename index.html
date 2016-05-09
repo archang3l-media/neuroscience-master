@@ -370,7 +370,6 @@ e = a * b #multiplication
 f = a / b #division
 g = a % b #modulus
 h = a ** b #exponent
-i = a // b #floor division
 					</code></pre>
 					</section>
 					<section>
@@ -393,7 +392,7 @@ a = ‘Hello ‘
 b = ‘World!’
 c = len(a+b) # Gives us the length of "Hello World!" and stores it in c
 print (a + b) # Prints out Hello World!
-print c #Prints out the Lenght of Hello World
+print (c) #Prints out the Lenght of Hello World
 					</code></pre>
 				</section>
 				<section>
@@ -458,7 +457,7 @@ for x in range(0, 101, 1):
 						<pre><code class "hljs" data-trim contenteditable="false">
 def answer():
 	return 42
-answer #This simple function just returns 42
+answer() #This simple function just returns 42
 
 def print_list(list):
 	for item in list:
@@ -480,10 +479,10 @@ def print_list(list):
 					<section>
 						<pre><code class "hljs" data-trim contenteditable="false">
 import math
-print math.sqrt(25)
+print (math.sqrt(25))
 
 from math import sqrt
-print sqrt(25)
+print (sqrt(25))
 						</code></pre>
 						<small>The result of both code fragments is the same</small>
 					</section>
