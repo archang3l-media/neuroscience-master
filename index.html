@@ -338,11 +338,13 @@ TODO: Manische Episoden
 					<section>
 						<h3>Commenting your Code</h3>
 						<pre><code class="hljs" data-trim contenteditable="false">
-print(‘Single line comment’) #This symbol indicates a single line comment
+print(‘Single line comment’) # This symbol indicates a single line comment
 print(‘Multiline comments are different’)
 """This is a comment
 which spans over multiple
 lines."""
+# But single line comments are
+# favored by the python style guide PEP8
 						</code></pre>
 						<p> Commenting your code makes it more read- and maintainable</p>
 					</section>
@@ -392,7 +394,7 @@ a = ‘Hello ‘
 b = ‘World!’
 c = len(a+b) # Gives us the length of "Hello World!" and stores it in c
 print (a + b) # Prints out Hello World!
-print (c) #Prints out the Lenght of Hello World
+print (c) # Prints out the Lenght of Hello World
 					</code></pre>
 				</section>
 				<section>
@@ -426,8 +428,8 @@ for z in range(len(sorted_list)):
 							<pre><code class "hljs" data-trim contenteditable="false">
 while condition_one == another_condition:
 	do_something()
-	do_something_more() #optional
-	break_condition == True #optional
+	do_something_more() # optional
+	break_condition == True # optional
 a = 0
 while a < 10:
 	a =+ 1
@@ -457,13 +459,14 @@ for x in range(0, 101, 1):
 						<pre><code class "hljs" data-trim contenteditable="false">
 def answer():
 	return 42
-answer() #This simple function just returns 42
+print(answer()) #This simple function just returns 42
 
 def print_list(list):
 	for item in list:
-		print(item) """This function takes a
-		list as an argument and prints
-		every item in a new line"""
+		print(item) # This function takes a
+		# list as an argument and prints
+		# every item in a new line"""
+print_list(my_list)
 						</code></pre>
 					</section>
 					<section>
@@ -498,39 +501,24 @@ print (sqrt(25))
 					</section>
 					<section>
 						<pre><code class"hljs" data-trim contenteditable="false">
-print ''.join('%(pre)s%(num)s %(bot)s on the wall, %(nul)s %(bot)s,\n%(tak)s\n' % (lambda c,b:
-{'pre':['','%s %s on the wall.\n\n' % (c,b)][abs(cmp(c,'Ninety-nine'))],
-'num':c, 'nul':c.lower(), 'bot':b,
-'tak':['Go to the store and buy some more... Ninety-nine %s.' % b,'Take one down, pass it around,'][abs(cmp(x,0))]
-})((lambda x,o: [(['Twenty','Thirty','Forty','Fifty',
-'Sixty','Seventy','Eighty','Ninety'][x/10-2]+'-'+o.lower()).replace('-no more',''), o][int(x<20)])(x, ['No more','One','Two',
-'Three','Four','Five','Six','Seven','Eight',
-'Nine','Ten','Eleven','Twelve','Thirteen','Fourteen',
-'Fifteen','Sixteen','Seventeen','Eighteen','Nineteen'][[x,x%10][int(x>=20)]]),'bottle%s of beer' % ['','s'][abs(cmp(x,1))])
-for x in xrange(99,-1,-1))
+a,t="\n%s bottles of beer on the wall","\nTake one down, pass it around"
+for d in range(99,0,-1):print((a%d*2)[:-12]+t+a%(d-1 or'No'))
 						</code></pre>
 					</section>
 					<section>
 					<pre><code class"hljs" data-trim contenteditable="false">
-#!/usr/bin/env python
-# -*- coding: iso-8859-1 -*-
-"""
-99 Bottles of Beer (by Gerold Penz)
-Python can be simple, too :-)
-"""
-
-for quant in range(99, 0, -1):
-	if quant > 1:
-		print quant, "bottles of beer on the wall,", quant, "bottles of beer."
-		if quant > 2:
-			suffix = str(quant - 1) + " bottles of beer on the wall."
-		else:
-			suffix = "1 bottle of beer on the wall."
-	elif quant == 1:
-		print "1 bottle of beer on the wall, 1 bottle of beer."
+	for quant in range(99, 0, -1):
+		if quant > 1:
+			print(quant, "bottles of beer on the wall,", quant, "bottles of beer.")
+			if quant > 2:
+			  suffix = str(quant - 1) + " bottles of beer on the wall."
+			else:
+			  suffix = "1 bottle of beer on the wall."
+		elif quant == 1:
+			print ("1 bottle of beer on the wall, 1 bottle of beer.")
 			suffix = "no more beer on the wall!"
-	print "Take one down, pass it around,", suffix
-	print "--"
+		print ("Take one down, pass it around,", suffix)
+		print ("--")
 						</code></pre>
 					</section>
 				</section>
