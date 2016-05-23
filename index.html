@@ -499,6 +499,7 @@ print (sqrt(25))
 						<ul>
 							<li>readable</li>
 							<li>maintainable</li>
+							<li>
 						</ul>
 					</section>
 					<section>
@@ -509,14 +510,14 @@ for d in range(99,0,-1):print((a%d*2)[:-12]+t+a%(d-1 or'No'))
 					</section>
 					<section>
 					<pre><code class"hljs" data-trim contenteditable="false">
-	for quant in range(99, 0, -1):
-		if quant > 1:
+	for quant in range(99, 0, -1): # Loop to count down from 99 to 1
+		if quant > 1: # Branch to see if there are more than 1 bottles on the wall
 			print(quant, "bottles of beer on the wall,", quant, "bottles of beer.")
-			if quant > 2:
+			if quant > 2: # Branch for the second line of the song
 			  suffix = str(quant - 1) + " bottles of beer on the wall."
-			else:
+			else: # Branch preparing for the last verse
 			  suffix = "1 bottle of beer on the wall."
-		elif quant == 1:
+		elif quant == 1: # The last verse of the song
 			print ("1 bottle of beer on the wall, 1 bottle of beer.")
 			suffix = "no more beer on the wall!"
 		print ("Take one down, pass it around,", suffix)
