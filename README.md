@@ -1,2 +1,2 @@
-Neuroscience Master Module @ CENs
+Neuroscience Master Module Seminar @ CENs
 Made with reveal.js
